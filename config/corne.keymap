@@ -15,8 +15,8 @@
       label = "Power Off";
       bindings = <&system_power>;
     };
-  }
-}
+  };
+};
 
 / {
         keymap {
