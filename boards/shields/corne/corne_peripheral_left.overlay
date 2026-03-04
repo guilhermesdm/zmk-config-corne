@@ -6,6 +6,7 @@
 
 #include "corne.dtsi"
 #include "corne-layouts.dtsi"
+#include "display_pinctrl.dtsi"
 
 / {
         chosen {
@@ -36,9 +37,11 @@
 };
 
 &pro_micro_i2c {
+    compatible = "nordic,nrf-twim";
     status = "okay";
-    sda-pin = <20>;
-    scl-pin = <17>;
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
