@@ -6,7 +6,6 @@
 
 #include "corne.dtsi"
 #include "corne-layouts.dtsi"
-#include "display_pinctrl.dtsi"
 
 / {
         chosen {
