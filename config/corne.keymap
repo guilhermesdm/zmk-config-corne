@@ -11,6 +11,12 @@
     keymap {
         compatible = "zmk,keymap";
 
+        &joy_up    { bindings = <&kp UP>; };
+        &joy_down  { bindings = <&kp DOWN>; };
+        &joy_left  { bindings = <&kp LEFT>; };
+        &joy_right { bindings = <&kp RIGHT>; };
+        &joy_press { bindings = <&kp ENTER>; };
+
         default_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC |
@@ -48,9 +54,4 @@
         };
     };
 
-    &joy_up    { bindings = <&kp UP>; };
-    &joy_down  { bindings = <&kp DOWN>; };
-    &joy_left  { bindings = <&kp LEFT>; };
-    &joy_right { bindings = <&kp RIGHT>; };
-    &joy_press { bindings = <&kp ENTER>; };
 };
