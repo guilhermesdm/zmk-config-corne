@@ -33,6 +33,30 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         >;
     };
 
+    joystick {
+        compatible = "gpio-keys";
+
+        joy_up: joy_up {
+            gpios = <&pro_micro 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+
+        joy_down: joy_down {
+            gpios = <&pro_micro 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+
+        joy_left: joy_left {
+            gpios = <&pro_micro 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+
+        joy_right: joy_right {
+            gpios = <&pro_micro 16 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+
+        joy_press: joy_press {
+            gpios = <&pro_micro 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        };
+    };
+
 };
 
 &pinctrl {
@@ -72,29 +96,5 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         com-sequential;
         inversion-on;
         prechargep = <0x22>;
-    };
-};
-
-joystick {
-    compatible = "gpio-keys";
-
-    joy_up: joy_up {
-        gpios = <&pro_micro 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-    };
-
-    joy_down: joy_down {
-        gpios = <&pro_micro 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-    };
-
-    joy_left: joy_left {
-        gpios = <&pro_micro 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-    };
-
-    joy_right: joy_right {
-        gpios = <&pro_micro 16 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-    };
-
-    joy_press: joy_press {
-        gpios = <&pro_micro 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
     };
 };
