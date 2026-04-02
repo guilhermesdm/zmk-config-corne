@@ -48,10 +48,10 @@
         };
     };
 
-    &joy_up    { bindings = <&kp UP>; };
-    &joy_down  { bindings = <&kp DOWN>; };
-    &joy_left  { bindings = <&kp LEFT>; };
-    &joy_right { bindings = <&kp RIGHT>; };
-    &joy_press { bindings = <&kp ENTER>; };
+    joy_up    { bindings = <&kp UP>; };
+    joy_down  { bindings = <&kp DOWN>; };
+    joy_left  { bindings = <&kp LEFT>; };
+    joy_right { bindings = <&kp RIGHT>; };
+    joy_press { bindings = <&kp ENTER>; };
 
 };
